@@ -1,5 +1,7 @@
 DesignPlaza::Application.routes.draw do
 
+  devise_for :users
+
   get "designs/index"
 
 
