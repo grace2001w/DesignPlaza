@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<div><b><%= @design.title %></b></div>
+<%= ('<img src="data:image/jpg;base64,%s" class="thumbnail">' % Base64.encode64(@design.thumbnail)).html_safe %>
+
+<p>
+  <%= @design.description %>
+</p>
+
+<p>
+  <b>Date:</b>
+  <%= @design.date %>
+</p>
+
+<p>
+  <b>Size:</b>
+  <%= @design.size %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @design.price %>
+</p>
+
+<%= link_to 'Edit', edit_design_path(@design) %> |
+<%= link_to 'Back', designs_path %>
