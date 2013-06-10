@@ -1,0 +1,14 @@
+<h1>One of a kind, only for you.</h1>
+
+<table class="center">
+<tr>
+<td>
+  <%= button_to 'Log in', new_user_session_path, :method => :get %>
+</td>
+<td>
+  <%= button_to 'Join Design Plaza', new_user_registration_path, :method => :get, :class => "btn-join" %>
+</td>
+</tr>
+</table>
+
+<%= image_tag "welcome.jpg" %>
