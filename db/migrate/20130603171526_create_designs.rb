@@ -7,10 +7,10 @@ class CreateDesigns < ActiveRecord::Migration
       t.string :size
       t.decimal :price
       t.binary :thumbnail
+      t.integer :user_id
 
       t.timestamps
     end
 
-    add_index :designs, :author_id
   end
 end

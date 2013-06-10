@@ -20,7 +20,6 @@ DesignPlaza::Application.routes.draw do
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
   resources :designs
-  resources :authors
 
   # Sample resource route with options:
   #   resources :products do
@@ -57,7 +56,7 @@ DesignPlaza::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'designs#index'
+  root :to => 'static_pages#welcome'
 
   # See how all your routes lay out with "rake routes"
 
