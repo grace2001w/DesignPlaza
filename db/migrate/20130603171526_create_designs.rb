@@ -12,5 +12,7 @@ class CreateDesigns < ActiveRecord::Migration
       t.timestamps
     end
 
+    add_index :designs, :title
+    add_index :designs, :user_id
   end
 end

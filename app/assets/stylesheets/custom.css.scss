@@ -120,3 +120,11 @@ footer ul li {
   margin-top: 45px;
   @include box_sizing;
 }
+
+.item {
+  width: 220px;
+  margin: 10px;
+  float: left;
+}
+
+@import "bootstrap-responsive";
