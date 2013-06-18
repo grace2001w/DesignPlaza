@@ -6,8 +6,8 @@ class CreateDesigns < ActiveRecord::Migration
       t.date :date
       t.string :size
       t.decimal :price
-      t.binary :thumbnail
       t.integer :user_id
+	  t.string :image
 
       t.timestamps
     end

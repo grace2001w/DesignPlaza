@@ -3,15 +3,16 @@
 <div id="container">
 <% @designs.each do |design| %>
   <div class="item">
-    <%= ('<img src="data:image/jpg;base64,%s">' % Base64.encode64(design.thumbnail)).html_safe %><br>
+    <%#= ('<img src="data:image/jpg;base64,%s">' % Base64.encode64(design.thumbnail)).html_safe %><br>
+	<%= link_to image_tag(design.image_url), design %>
     <%= design.title %><br>
     <%= design.description %><br>
     <%= design.date %><br>
     <%= design.size %><br>
     $<%= design.price %><br>
-    <%= link_to 'Show', design %>
-    <%= link_to 'Edit', edit_design_path(design) %>
-    <%= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <%#= link_to 'Show', design %>
+    <%#= link_to 'Edit', edit_design_path(design) %>
+    <%#= link_to 'Destroy', design, method: :delete, data: { confirm: 'Are you sure?' } %>
   </div>
 <% end %>
 </div>

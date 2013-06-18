@@ -16,16 +16,18 @@
 class Design < ActiveRecord::Base
   belongs_to :user
 
-  attr_accessible :date, :description, :price, :size, :thumbnail, :title, :image_file, :user_id
+  #attr_accessible :date, :description, :price, :size, :thumbnail, :title, :image_file, :user_id
+  attr_accessible :date, :description, :price, :size, :image, :title, :user_id
+  mount_uploader :image, ImageUploader
 
-  validates :date, :price, :thumbnail, :title, :user_id, presence: true
+  validates :date, :price, :image, :title, :user_id, presence: true
   validates :description, presence: true , length: {minimum: 5}
   validates :size, presence: true, 
                    format: {with: /\d+x\d+/, message: "Please specify size as widthxheight"}
 
-  def image_file=(input_data)
-    self.thumbnail = input_data.read
-  end
+  #def image_file=(input_data)
+  #  self.thumbnail = input_data.read
+  #end
 
   default_scope order: 'designs.created_at DESC'
 end

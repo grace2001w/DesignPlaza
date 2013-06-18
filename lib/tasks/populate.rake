@@ -6,19 +6,22 @@ namespace :db do
 end
 
 def make_designs
-	5.times do |n|
-		title = "design #{n+1}"	
+	9.times do |n|
+		n = n+1
+		title = "design #{n}"	
 		description = Faker::Lorem.sentence(5)
-		date = '2013-06-13'
+		date = '2013-06-17'
 		size = "#{n}x#{n}"
 		price = 100*n
-		thumbnail = "junk"
-		Design.create(title:title,
+		puts Rails.root
+		image = open(File.join(Rails.root, "app/assets/images/seeds/image#{n}.jpg"))
+		Design.create!(title:title,
 					  description:description,
 					  date:date,
 					  price:price,
 					  size:size,
-					  thumbnail:thumbnail,
+					  image:image,
 					  user_id:1)
+
 	end					  	
 end

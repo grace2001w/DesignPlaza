@@ -1,5 +1,6 @@
 <div><b><%= @design.title %></b></div>
-<%= ('<img src="data:image/jpg;base64,%s" class="thumbnail">' % Base64.encode64(@design.thumbnail)).html_safe %>
+<%#= ('<img src="data:image/jpg;base64,%s" class="thumbnail">' % Base64.encode64(@design.thumbnail)).html_safe %>
+<%= link_to image_tag(@design.image_url), edit_design_path(@design) %>
 
 <p>
   <%= @design.description %>

@@ -83,8 +83,8 @@ class DesignsController < ApplicationController
   end
   
   # GET /designs/1/image
-  def image
-    @design = Design.find(params[:id])
-    send_data @design.thumbnail, :type => 'image/jpg', :disposition => 'inline'
-  end
+  #def image
+  #  @design = Design.find(params[:id])
+  #  send_data @design.thumbnail, :type => 'image/jpg', :disposition => 'inline'
+  #end
 end

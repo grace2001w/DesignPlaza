@@ -32,8 +32,8 @@
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :thumbnail %><br />
-    <%= f.file_field :image_file %>
+    <%= f.label :image %><br />
+    <%= f.file_field :image %>
   </div>
   <div class="hidden">
     <%= f.hidden_field :user_id, :value => current_user.id %>

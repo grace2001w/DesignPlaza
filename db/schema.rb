@@ -13,21 +13,14 @@
 
 ActiveRecord::Schema.define(:version => 20130605034006) do
 
-  create_table "clients", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "designs", :force => true do |t|
     t.string   "title"
     t.string   "description"
     t.date     "date"
     t.string   "size"
     t.decimal  "price"
-    t.binary   "thumbnail"
     t.integer  "user_id"
+    t.string   "image"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
